@@ -1,0 +1,5 @@
+outs:
+- md5: e00508dde85c5c95c450d54e3fc6625a
+  size: 6186
+  hash: md5
+  path: team_performance_stats_smoothed.xlsx

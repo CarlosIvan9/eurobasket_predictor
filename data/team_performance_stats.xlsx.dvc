@@ -1,0 +1,5 @@
+outs:
+- md5: 41a0c6dd37a3fa174d51a70569899e77
+  size: 6189
+  hash: md5
+  path: team_performance_stats.xlsx
