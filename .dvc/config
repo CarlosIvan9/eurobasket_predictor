@@ -1,4 +1,6 @@
 [core]
-    remote = storage
+    remote = drive_local
 ['remote "storage"']
     url = gdrive://18gPmizOKtqR1OqMK7uUFn1saHQJm5yGf
+['remote "drive_local"']
+    url = G:\My Drive\ML-AI\Projects\eurobasket_predictor\data\dvc
