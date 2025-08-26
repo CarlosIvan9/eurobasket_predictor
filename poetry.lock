@@ -1214,6 +1214,25 @@ dev = ["dvc-data[all]", "dvc-data[tests]", "mypy (==1.17.1)", "types-tqdm"]
 tests = ["pytest (>=7,<9)", "pytest-benchmark (>=4)", "pytest-cov (>=4.1.0)", "pytest-mock", "pytest-servers (==0.5.12)", "pytest-sugar"]
 
 [[package]]
+name = "dvc-gdrive"
+version = "3.0.1"
+description = "gdrive plugin for dvc"
+optional = false
+python-versions = ">=3.8"
+groups = ["main"]
+files = [
+    {file = "dvc-gdrive-3.0.1.tar.gz", hash = "sha256:ad7c9cd044083745150a57649eb4ef9240348f054bed5a8f8aa5f1820c6384ec"},
+    {file = "dvc_gdrive-3.0.1-py3-none-any.whl", hash = "sha256:9ee784501aa5229d4c02f195e783836d0d466c7218cf57bddcfa0f827ba5766c"},
+]
+
+[package.dependencies]
+dvc = "*"
+pydrive2 = {version = ">=1.19.0", extras = ["fsspec"]}
+
+[package.extras]
+tests = ["Pygments (==2.10.0)", "collective.checkdocs (==0.2)", "dvc[testing]", "filelock (==3.3.2)", "flaky (==3.7.0)", "mock (==4.0.3)", "mypy (==0.981)", "pydocstyle (==6.1.1)", "pylint (==2.16.2)", "pylint-plugin-utils (==0.6)", "pylint-pytest (==1.1.2)", "pytest (==6.2.5)", "pytest-cov (==3.0.0)", "pytest-docker (>=1,<2)", "pytest-lazy-fixture (==0.6.3)", "pytest-mock (==3.6.1)", "pytest-xdist (==2.4.0)", "pywin32 (>=225) ; sys_platform == \"win32\"", "types-requests (==2.25.11)", "types-tabulate (==0.8.3)", "types-toml (==0.10.1)", "wget (==3.2)", "wheel (==0.37.0)", "xmltodict (==0.12.0)"]
+
+[[package]]
 name = "dvc-http"
 version = "2.32.0"
 description = "http plugin for dvc"
@@ -3971,11 +3990,15 @@ files = [
 ]
 
 [package.dependencies]
+appdirs = {version = ">=1.4.3", optional = true, markers = "extra == \"fsspec\""}
 cryptography = "<44"
+fsspec = {version = ">=2021.07.0", optional = true, markers = "extra == \"fsspec\""}
+funcy = {version = ">=1.14", optional = true, markers = "extra == \"fsspec\""}
 google-api-python-client = ">=1.12.5"
 oauth2client = ">=4.0.0"
 pyOpenSSL = ">=19.1.0,<=24.2.1"
 PyYAML = ">=3.0"
+tqdm = {version = ">=4.0.0", optional = true, markers = "extra == \"fsspec\""}
 
 [package.extras]
 fsspec = ["appdirs (>=1.4.3)", "fsspec (>=2021.07.0)", "funcy (>=1.14)", "tqdm (>=4.0.0)"]
@@ -5538,4 +5561,4 @@ type = ["pytest-mypy"]
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.9"
-content-hash = "a312ee1e2645f763b3526c2c8eb36e3a3f8579dec2e7a3269f29e5b61c6426aa"
+content-hash = "24472727a7b38e07c4ae9973341ed1915e4a7b46bfac87d817f269e956487224"
